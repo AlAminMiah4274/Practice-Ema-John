@@ -1,4 +1,31 @@
 .navbar {
     height: 80px;
     background-color: #1c2b53;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar img {
+    margin-left: 112px;
+}
+
+.nav-text {
+    margin-right: 97px;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    margin-left: 32px;
+}
+
+.navbar a:hover {
+    color: orange;
 }
