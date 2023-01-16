@@ -4,19 +4,22 @@ import './Shop.css';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
+    // console.log(products);
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setProducts(data))
     }, []);
     return (
         <div className='shop-container'>
             <div className='product-container'>
-                <Product></Product>
+                {
+                    products.map(product => <Product key={product.id} product={product}></Product>)
+                }
             </div>
             <div className='summary-container'>
-                <h2>Order summary</h2>
+                <h2>Order Summary</h2>
             </div>
         </div>
     );
